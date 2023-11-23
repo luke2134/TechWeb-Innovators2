@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Object List - Your Web Application</title>
+</head>
+<body>
+    <header>
+        <img src="team-logo.png" alt="Team Logo">
+        <h1>Object List</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Landing Page.html">Home</a></li>
+            <li><a href="create-object.html">Create Object</a></li>
+            <li><a href="object-list.html">Object List</a></li>
+             
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tech Name</th>
+                        <th>Tech Description</th>
+                        <th>Tech Category</th>
+                        <th> Date of release</th>
+                        <th>Action</th>
+                         
+                    </tr>
+                </thead>
+                <tbody id="objectTableBody">
+                  
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+           
+            var storedObjects = JSON.parse(sessionStorage.getItem("objects")) || [];
+
+            
+            var objectTableBody = document.getElementById("objectTableBody");
+            storedObjects.forEach(function(object, index) {
+                var newRow = document.createElement("tr");
+                newRow.innerHTML = `<td>${object.name}</td>
+                                   <td>${object.description}</td>
+                                   <td>${object.category}</td>
+                                   <td>${object.date}</td>
+                                   <td>
+                                       <a href="#" onclick="updateObject(${index})">Update</a>
+                                       <a href="#" onclick="deleteObject(${index})">Delete</a>
+                                   </td>`;
+                objectTableBody.appendChild(newRow);
+            });
+        </script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Update Object - Your Web Application</title>
+</head>
+<body>
+    <header>
+        <img src="team-logo.png" alt="Team Logo">
+        <h1>Object List</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Landing Page.html">Home</a></li>
+            <li><a href="create-object.html">Create Object</a></li>
+            <li><a href="object-list.html">Object List</a></li>
+             
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            
+            <form id="updateObjectForm">
+               
+                <label for="updatedObjectName">Tech Name:</label>
+                <input type="text" id="updatedObjectName" name="updatedObjectName" required value="">
+
+                <label for="updatedObjectDescription">Tech Description:</label>
+                <textarea id="updatedObjectDescription" name="updatedObjectDescription" rows="4" required></textarea>
+
+                <label for="updatedObjectCategory">Tech Category:</label>
+                <select id="updatedObjectCategory" name="updatedObjectCategory" required>
+                    <option value="category1">Computers</option>
+                    <option value="category2">Servers</option>
+                    <option value="category3">Mobile devices</option>
+                    <option value="category3">Wearables</option>
+                    <option value="category3">Networking equipment</option>
+                 
+                </select>
+
+                <label for="updatedObjectDate">Tech Date of release:</label>
+                <input type="date" id="updatedObjectDate" name="updatedObjectDate" required>
+
+                 
+                <button type="button" onclick="saveUpdatedObject()">Save Changes</button>
+            </form>
+        </div>
+
+      
+        <script src="script.js" defer></script>
+    </main>
+</body>
+</html>

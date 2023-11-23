@@ -10,7 +10,7 @@
 <body>
     <header>
         <img src="team-logo.png" alt="Team Logo">
-        <h1>Object List</h1>
+        <h1>Update Object List</h1>
     </header>
     <nav>
         <ul>
@@ -31,14 +31,15 @@
                 <label for="updatedObjectDescription">Tech Description:</label>
                 <textarea id="updatedObjectDescription" name="updatedObjectDescription" rows="4" required></textarea>
 
-                <label for="updatedObjectCategory">Tech Category:</label>
-                <select id="updatedObjectCategory" name="updatedObjectCategory" required>
-                    <option value="category1">Computers</option>
-                    <option value="category2">Servers</option>
-                    <option value="category3">Mobile devices</option>
-                    <option value="category3">Wearables</option>
-                    <option value="category3">Networking equipment</option>
+                <label for="objectCategory">Tech Category:</label>
+                <select id="objectCategory" name="objectCategory" required>
+                    <option value="Computers">Computers</option>
+                    <option value="Servers">Servers</option>
+                    <option value="Mobile devices">Mobile devices</option>
+                    <option value="Wearables">Wearables</option>
+                    <option value="Networking equipment">Networking equipment</option>
                  
+                    
                 </select>
 
                 <label for="updatedObjectDate">Tech Date of release:</label>
@@ -52,5 +53,8 @@
       
         <script src="script.js" defer></script>
     </main>
+    <div class="footer">
+        <p>&copy; 2023 Web Application | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
 </body>
 </html>

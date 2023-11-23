@@ -107,7 +107,7 @@ a:hover {
     color: #0056b3;
 }
 
-/* Additional styles for the index.html page */
+ 
 body {
     text-align: center;
 }
@@ -120,5 +120,24 @@ body {
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
-    margin-top: 2rem; /* Adjust the margin as needed */
+    margin-top: 2rem; 
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
